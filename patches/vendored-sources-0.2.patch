@@ -1,0 +1,83 @@
+diff -r -u b/.cargo/config a/.cargo/config
+--- b/.cargo/config	2018-07-13 13:26:26.531118873 +0300
++++ a/.cargo/config	2018-07-13 13:27:06.788295664 +0300
+@@ -0,0 +1,79 @@
++[source."https://github.com/paritytech/integer-sqrt-rs.git"]
++git = "https://github.com/paritytech/integer-sqrt-rs.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/jsonrpc.git"]
++git = "https://github.com/paritytech/jsonrpc.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/parity.git"]
++git = "https://github.com/paritytech/parity.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/rust-ctrlc.git"]
++git = "https://github.com/paritytech/rust-ctrlc.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/rust-rocksdb"]
++git = "https://github.com/paritytech/rust-rocksdb"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/rust-secp256k1"]
++git = "https://github.com/paritytech/rust-secp256k1"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/rust-snappy"]
++git = "https://github.com/paritytech/rust-snappy"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/rphmeier/primitives.git"]
++git = "https://github.com/rphmeier/primitives.git"
++branch = "compile-for-wasm"
++replace-with = "vendored-sources"
++
++[source."https://github.com/rphmeier/rustc-hex.git"]
++git = "https://github.com/rphmeier/rustc-hex.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/tomusdrw/ws-rs"]
++git = "https://github.com/tomusdrw/ws-rs"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/tomaka/libp2p-rs"]
++git = "https://github.com/tomaka/libp2p-rs"
++branch = "polkadot-2"
++replace-with = "vendored-sources"
++ 
++[source."https://github.com/paritytech/futures-mutex"]
++git = "https://github.com/paritytech/futures-mutex"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/redox-os/tfs"]
++git = "https://github.com/redox-os/tfs"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/Vurich/rust-smallvec.git"]
++git = "https://github.com/Vurich/rust-smallvec.git"
++branch = "array-zero"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/aio-limited.git"]
++git = "https://github.com/paritytech/aio-limited.git"
++branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/paritytech/yamux"]
++git = "https://github.com/paritytech/yamux"
++branch = "master"
++replace-with = "vendored-sources"
