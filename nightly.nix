@@ -12,8 +12,8 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "paritytech";
     repo = "polkadot";
-    rev = "4af260fea194d807a48f63dbd4b4595d4be91744";
-    sha256 = "0488hfg4g10k780j09w3m6835a92fnzllx8saihnqw2vcc5jc552";
+    rev = "c04e4b2f24aa03edb68ba75196456e26cd5a7dc6";
+    sha256 = "0drymryaapl4xvhxbdajcnnsv1gp6wkl89jxfng2060xi41gwrj3";
   }; 
 
   cargoSha256 = "1lk2scy2sj6argr33lmj188dl4r3v8vc7psv5gj70vjshl0hakdd";
