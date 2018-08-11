@@ -12,11 +12,11 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "paritytech";
     repo = "polkadot";
-    rev = "c04e4b2f24aa03edb68ba75196456e26cd5a7dc6";
-    sha256 = "0drymryaapl4xvhxbdajcnnsv1gp6wkl89jxfng2060xi41gwrj3";
+    rev = "25f0c077c9519d038c40262bd0c148764891ad96";
+    sha256 = "11z4qmppllqmympbs48vlycb3z3v4q4nqzv0wasagzpywvrn0kbj";
   }; 
 
-  cargoSha256 = "1lk2scy2sj6argr33lmj188dl4r3v8vc7psv5gj70vjshl0hakdd";
+  cargoSha256 = "1yfwzshb0qdh1zybjd816ss6qvfh8mj3rgmk8vd6dsza0wnm36nc";
 
   patches = [ ./patches/vendored-sources-0.2.patch ];
 
