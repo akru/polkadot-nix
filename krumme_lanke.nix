@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   name = "polkadot-${version}";
-  version = "nightly";
+  version = "0.2.17";
 
   src = fetchFromGitHub {
-    owner = "paritytech";
-    repo = "polkadot";
-    rev = "25f0c077c9519d038c40262bd0c148764891ad96";
-    sha256 = "11z4qmppllqmympbs48vlycb3z3v4q4nqzv0wasagzpywvrn0kbj";
+    owner = "akru";
+    repo = "substrate";
+    rev = "c7715e3180a7bcb53232bf5b78ca766bec4def63";
+    sha256 = "0v7g03rbml2afw0splmyjh9nqpjg0ldjw09hyc0jqd3qlhgxiiyj";
   }; 
 
-  cargoSha256 = "1yfwzshb0qdh1zybjd816ss6qvfh8mj3rgmk8vd6dsza0wnm36nc";
+  cargoSha256 = "0wwkaxqj2v5zach5xcqfzf6prc0gxy2v47janglp44xbxbx9xk08";
 
   patches = [ ./patches/vendored-sources-0.2.patch ];
 

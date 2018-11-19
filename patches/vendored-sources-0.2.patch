@@ -1,7 +1,7 @@
 diff -r -u b/.cargo/config a/.cargo/config
 --- b/.cargo/config	2018-07-13 13:26:26.531118873 +0300
 +++ a/.cargo/config	2018-07-13 13:27:06.788295664 +0300
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,84 @@
 +[source."https://github.com/paritytech/integer-sqrt-rs.git"]
 +git = "https://github.com/paritytech/integer-sqrt-rs.git"
 +branch = "master"
@@ -14,7 +14,7 @@ diff -r -u b/.cargo/config a/.cargo/config
 +
 +[source."https://github.com/paritytech/parity.git"]
 +git = "https://github.com/paritytech/parity.git"
-+branch = "master"
++rev = "202c54d42398fc4b49d67ffbf9070522e38f9360"
 +replace-with = "vendored-sources"
 +
 +[source."https://github.com/paritytech/rust-ctrlc.git"]
@@ -54,7 +54,7 @@ diff -r -u b/.cargo/config a/.cargo/config
 +
 +[source."https://github.com/tomaka/libp2p-rs"]
 +git = "https://github.com/tomaka/libp2p-rs"
-+branch = "polkadot-2"
++rev = "8111062f0177fd7423626f2db9560273644a4c4d"
 +replace-with = "vendored-sources"
 + 
 +[source."https://github.com/paritytech/futures-mutex"]
@@ -80,4 +80,9 @@ diff -r -u b/.cargo/config a/.cargo/config
 +[source."https://github.com/paritytech/yamux"]
 +git = "https://github.com/paritytech/yamux"
 +branch = "master"
++replace-with = "vendored-sources"
++
++[source."https://github.com/tomaka/rust-websocket"]
++git = "https://github.com/tomaka/rust-websocket"
++branch = "send"
 +replace-with = "vendored-sources"
