@@ -10,9 +10,9 @@ rustPlatform.buildRustPackage rec {
   version = "0.2.17";
 
   src = fetchFromGitHub {
-    owner = "akru";
+    owner = "paritytech";
     repo = "substrate";
-    rev = "c7715e3180a7bcb53232bf5b78ca766bec4def63";
+    rev = "v0.2";
     sha256 = "0v7g03rbml2afw0splmyjh9nqpjg0ldjw09hyc0jqd3qlhgxiiyj";
   }; 
 
