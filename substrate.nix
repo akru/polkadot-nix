@@ -7,18 +7,16 @@
 , clang
 }:
 
-let
-  rev = "8b0e5d7ca8b3bf4ae2ad26d773e466d5bc30cbaa";
-
-in rustPlatform.buildRustPackage rec {
-  name = "substrate-node-${version}";
-  version = builtins.substring 0 8 rev;
+rustPlatform.buildRustPackage rec {
+  name = "${pname}-${version}";
+  pname = "substrate-node";
+  version = "0.9.2";
 
   src = fetchFromGitHub {
     owner = "paritytech";
     repo = "substrate";
+    rev = "8b0e5d7ca8b3bf4ae2ad26d773e466d5bc30cbaa";
     sha256 = "1z2m2851512pik59aqnk8fgdw5irmp7khfn8zwimg1cn799kzm0h";
-    inherit rev;
   }; 
 
   cargoSha256 = "0d41sg94ivrnkrhmi11b7n3jbh5p242bh15ypfq2ip9q3kkh6wan";
