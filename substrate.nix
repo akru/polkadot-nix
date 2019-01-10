@@ -8,7 +8,7 @@
 }:
 
 let
-  rev = "b5f7e4c302c9909024750e92a815be434af02ec9";
+  rev = "8b0e5d7ca8b3bf4ae2ad26d773e466d5bc30cbaa";
 
 in rustPlatform.buildRustPackage rec {
   name = "substrate-node-${version}";
@@ -17,11 +17,11 @@ in rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "paritytech";
     repo = "substrate";
-    sha256 = "0vxzi0i9mav5kx6ch63iy0qgv4xk2lz9p3h1573bxxyiylv37hi9";
+    sha256 = "1z2m2851512pik59aqnk8fgdw5irmp7khfn8zwimg1cn799kzm0h";
     inherit rev;
   }; 
 
-  cargoSha256 = "05bjyiqsbxv9ylg0dnkn0f252wn5kga5sr43q2wlvw4zxa9kp8iz";
+  cargoSha256 = "0d41sg94ivrnkrhmi11b7n3jbh5p242bh15ypfq2ip9q3kkh6wan";
 
   buildInputs = [ pkgconfig openssl openssl.dev clang ];
   LIBCLANG_PATH = "${llvmPackages.libclang}/lib";

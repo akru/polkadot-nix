@@ -1,8 +1,17 @@
-{ nixpkgs ? import <nixpkgs> { }
+{ nixpkgs ? import ./fetchNixpkgs.nix { }
+, systems ? [ "x86_64-linux" "aarch64-linux" ]
 }:
 
-rec {
-  krumme_lanke = nixpkgs.callPackage ./krumme_lanke.nix { };
-  alexander = nixpkgs.callPackage ./alexander.nix { };
-  substrate = nixpkgs.callPackage ./substrate.nix { };
+with import nixpkgs { };
+
+let
+  forAllSystems = package:
+    lib.genAttrs systems (system:
+      with import nixpkgs { inherit system; }; callPackage package { }
+    );
+
+in rec {
+  krumme_lanke = forAllSystems ./krumme_lanke.nix;
+  alexander = forAllSystems ./alexander.nix;
+  substrate = forAllSystems ./substrate.nix;
 }
